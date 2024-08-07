@@ -1,0 +1,65 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Custom styles for radio buttons */
+radio : be{
+    color:transparent;
+}
+
+.custom-radio {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #e53e3e; /* Tailwind color red-600 */
+  border-radius: 50%;
+  position: relative;
+    border-color:none;
+    color:transparant;
+}
+
+.custom-radio:checked::before {
+
+  content: '';
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #e53e3e; /* Tailwind color red-600 */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+[type='checkbox']:checked, [type='radio']:checked {
+    border-color: red;
+    background-color: currentColor;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+[type='checkbox'], [type='radio'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    display: inline-block;
+    vertical-align: middle;
+    background-origin: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    flex-shrink: 0;
+    height: 1rem;
+    width: 1rem;
+    color: transparent;
+    background-color: #fff;
+    border-color: #red;
+    border-width: 1px;
+    --tw-shadow: 0 0 #0000;
+}
